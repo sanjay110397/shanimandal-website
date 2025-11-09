@@ -1,0 +1,67 @@
+{
+  "nav": {
+    "home": "Home",
+    "history": "History",
+    "gallery": "Gallery",
+    "visit": "Visit"
+  },
+  "home": {
+    "title": "Shani Mandal Temple",
+    "subtitle": "A Sacred Sanctuary in Nandurbar",
+    "welcome": "Welcome to Shani Mandal Temple",
+    "description": "Located in the heart of Nandurbar, Maharashtra, Shani Mandal Temple is a revered place of worship dedicated to Lord Shanidev. Our temple welcomes devotees from all walks of life to seek blessings, find peace, and connect with the divine.",
+    "visitButton": "Plan Your Visit",
+    "exploreButton": "Explore Our History",
+    "aboutTitle": "About Our Temple",
+    "aboutText": "Shani Mandal Temple has been a beacon of spiritual light for our community. We invite you to experience the divine presence and participate in our daily prayers and special ceremonies.",
+    "timingsTitle": "Daily Timings",
+    "morning": "Morning: 6:00 AM - 12:00 PM",
+    "evening": "Evening: 4:00 PM - 9:00 PM",
+    "specialTitle": "Special Ceremonies",
+    "saturday": "Saturday Special Pooja",
+    "festivals": "Festival Celebrations"
+  },
+  "history": {
+    "title": "Temple History",
+    "subtitle": "A Legacy of Faith and Devotion",
+    "establishment": "Establishment",
+    "establishmentText": "The Shani Mandal Temple was established decades ago by devoted villagers who sought to create a sacred space for worshiping Lord Shanidev. The temple has since become a cornerstone of spiritual life in Tal. Nandurbar.",
+    "significance": "Spiritual Significance",
+    "significanceText": "Lord Shanidev is revered as the deity who bestows justice and teaches life lessons through discipline and patience. Devotees visit the temple to seek his blessings for protection from adversities and to find strength during challenging times.",
+    "architecture": "Temple Architecture",
+    "architectureText": "The temple features traditional architecture that reflects the rich cultural heritage of Maharashtra. The sanctum sanctorum houses a beautiful idol of Lord Shanidev, and the premises are adorned with elements that create a serene and devotional atmosphere.",
+    "community": "Community Service",
+    "communityText": "Beyond spiritual services, our temple actively participates in community welfare activities, organizes festivals, and provides a space for cultural gatherings that strengthen the bonds within our village community."
+  },
+  "gallery": {
+    "title": "Temple Gallery",
+    "subtitle": "Glimpses of Divine Moments"
+  },
+  "visit": {
+    "title": "Plan Your Visit",
+    "subtitle": "We Welcome You with Open Hearts",
+    "addressTitle": "Temple Address",
+    "address": "Shani Mandal Temple, Tal. Nandurbar, Dist. Nandurbar, Maharashtra - 425412",
+    "contactTitle": "Contact Information",
+    "phone": "Phone: +91 XXXXX XXXXX",
+    "email": "Email: info@shanimandal.org",
+    "timingsTitle": "Temple Timings",
+    "morningTiming": "Morning: 6:00 AM - 12:00 PM",
+    "eveningTiming": "Evening: 4:00 PM - 9:00 PM",
+    "saturdayNote": "Saturday: Special Shani Pooja at 7:00 AM",
+    "guidelinesTitle": "Visitor Guidelines",
+    "guideline1": "Please maintain silence within the temple premises",
+    "guideline2": "Remove footwear before entering the sanctum",
+    "guideline3": "Photography is allowed in designated areas only",
+    "guideline4": "Prasad distribution after evening aarti",
+    "contactFormTitle": "Get in Touch",
+    "namePlaceholder": "Your Name",
+    "emailPlaceholder": "Your Email",
+    "messagePlaceholder": "Your Message",
+    "submitButton": "Send Message"
+  },
+  "footer": {
+    "copyright": "© 2025 Shani Mandal Temple. All rights reserved.",
+    "tagline": "May Lord Shanidev Bless You"
+  }
+}
