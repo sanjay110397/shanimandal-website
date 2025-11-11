@@ -22,17 +22,20 @@
     "festivals": "Festival Celebrations"
   },
   "history": {
-    "title": "Temple History",
-    "subtitle": "A Legacy of Faith and Devotion",
-    "establishment": "Establishment",
-    "establishmentText": "The Shani Mandal Temple was established decades ago by devoted villagers who sought to create a sacred space for worshiping Lord Shanidev. The temple has since become a cornerstone of spiritual life in Tal. Nandurbar.",
-    "significance": "Spiritual Significance",
-    "significanceText": "Lord Shanidev is revered as the deity who bestows justice and teaches life lessons through discipline and patience. Devotees visit the temple to seek his blessings for protection from adversities and to find strength during challenging times.",
-    "architecture": "Temple Architecture",
-    "architectureText": "The temple features traditional architecture that reflects the rich cultural heritage of Maharashtra. The sanctum sanctorum houses a beautiful idol of Lord Shanidev, and the premises are adorned with elements that create a serene and devotional atmosphere.",
-    "community": "Community Service",
-    "communityText": "Beyond spiritual services, our temple actively participates in community welfare activities, organizes festivals, and provides a space for cultural gatherings that strengthen the bonds within our village community."
-  },
+  "title": "Temple History",
+  "subtitle": "A Sacred Legacy of Devotion and Faith",
+  "origin": "Ancient Origins",
+  "originText": "The worship of celestial deities holds a special place in Hindu tradition. Among them, Lord Shani is known as the divine force of justice. The Shani Mandal Temple of Nandurbar stands as one of the sacred places where devotees believe their 'Sade Sati' ends with the darshan of Lord Shani.",
+  "legend": "Legend of King Vikramaditya",
+  "legendText": "According to legend, King Vikramaditya once mocked Lord Shani in his royal court. Angered, Shani Dev descended and declared that he would test the king. During this period, Vikramaditya suffered greatly but learned humility and faith. In the end, Lord Shani restored his honor and chose to reside here — blessing the village with divine protection. Thus, the place came to be known as 'Shani Mandal'.",
+  "architecture": "Temple Architecture",
+  "architectureText": "The temple, estimated to be 700–800 years old, features a blend of traditional Marathi and South Indian architecture. Inside, the sanctum houses a magnificent black stone idol of Lord Shani surrounded by his family and attendants. The ceilings are decorated with colored glass, and the mandap glows with intricate artwork.",
+  "festivals": "Festivals and Significance",
+  "festivalsText": "Major festivals include Shani Jayanti on Vaishakh Amavasya and the grand Shani Amavasya fair, which attracts thousands of devotees from Maharashtra, Gujarat, and Madhya Pradesh. The temple is known as 'Sade Sati Mukti Dham Shakti Peeth' — a place believed to free devotees from planetary afflictions.",
+  "visitorInfo": "Visitor Information",
+  "visitorInfoText": "Located about 20 km from Nandurbar, the temple is easily accessible by ST buses and private vehicles. Lodging and food facilities are available nearby for devotees visiting from across states.",
+  "panditNote": "Our respected Pandit Ji has been guiding devotees with deep faith and devotion, preserving the spiritual essence of the temple."
+},
   "gallery": {
     "title": "Temple Gallery",
     "subtitle": "Glimpses of Divine Moments"

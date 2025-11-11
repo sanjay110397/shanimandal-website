@@ -5,6 +5,12 @@ import { MapPin, Clock, Calendar } from 'lucide-react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { SEO } from '../components/SEO';
 
+import templeImage from '../assets/images/get_of_temple.webp';
+import InsideTheTemple from '../assets/images/InsideTheTemple.webp';
+import FrontViewOfTemple from '../assets/images/FrontViewOfTemple.webp';
+import Prasadalay from '../assets/images/Prasadalay.webp';
+import Yatra2 from '../assets/images/Yatra2.webp';
+
 export function Home() {
   const { t } = useTranslation();
 
@@ -20,7 +26,7 @@ export function Home() {
       >
         <div className="absolute inset-0 bg-black/40" />
         <ImageWithFallback
-          src="https://images.unsplash.com/photo-1668770109988-24fe041e6b8f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoaW5kdSUyMHRlbXBsZSUyMGFyY2hpdGVjdHVyZXxlbnwxfHx8fDE3NjI2NzI1NjZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+          src={templeImage}
           alt="Shani Mandal Temple"
           className="absolute inset-0 w-full h-full object-cover mix-blend-overlay"
         />
@@ -87,7 +93,7 @@ export function Home() {
               transition={{ duration: 0.6 }}
             >
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1747487501299-d95d65c742a5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjB0ZW1wbGUlMjBkZWl0eXxlbnwxfHx8fDE3NjI2NzI1NjZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                src={InsideTheTemple}
                 alt="Temple Interior"
                 className="rounded-lg shadow-xl w-full h-[400px] object-cover"
               />
@@ -145,30 +151,30 @@ export function Home() {
             <h2 className="mb-4 text-gray-900">{t('gallery.title')}</h2>
             <p className="text-gray-600">{t('gallery.subtitle')}</p>
           </motion.div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
-            {[
-              'https://images.unsplash.com/photo-1736522657079-6e3c283590f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZW1wbGUlMjB3b3JzaGlwJTIwY2VyZW1vbnl8ZW58MXx8fHwxNzYyNjcyNTY2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-              'https://images.unsplash.com/photo-1754666525419-e2aa1a0597d3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZW1wbGUlMjBpbnRlcmlvciUyMHNwaXJpdHVhbHxlbnwxfHx8fDE3NjI2NzI1NjZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-              'https://images.unsplash.com/photo-1558961011-24a95f882426?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZW1wbGUlMjBiZWxscyUyMHByYXllcnxlbnwxfHx8fDE3NjI2NzI1Njd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-            ].map((src, index) => (
+         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-12">
+            {[Yatra2, Prasadalay, FrontViewOfTemple].map((src, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
+                initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1, duration: 0.5 }}
-                className="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow"
+                transition={{ delay: index * 0.15, duration: 0.6 }}
+                className="overflow-hidden rounded-2xl shadow-md hover:shadow-lg transition-all duration-300"
               >
                 <ImageWithFallback
                   src={src}
                   alt={`Temple ${index + 1}`}
-                  className="w-full h-48 object-cover hover:scale-110 transition-transform duration-300"
+                  className="
+                    w-full
+                    h-[250px] sm:h-[280px] md:h-[320px] 
+                    object-cover object-center
+                    hover:scale-105 
+                    transition-transform duration-500
+                  "
                 />
               </motion.div>
             ))}
           </div>
-
           <div className="text-center">
             <Link
               to="/gallery"
