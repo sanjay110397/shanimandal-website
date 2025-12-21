@@ -3,25 +3,60 @@ import { useTranslation } from 'react-i18next';
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Clock, CheckCircle2 } from 'lucide-react';
 import { SEO } from '../components/SEO';
+import emailjs from '@emailjs/browser';
 
 export function Visit() {
   const { t } = useTranslation();
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
-  const [submitted, setSubmitted] = useState(false);
+  name: '',
+  email: '',
+  message: '',
+});
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Mock form submission
+const [submitted, setSubmitted] = useState(false);
+const [loading, setLoading] = useState(false);
+
+ const handleSubmit = async (e) => {
+  e.preventDefault();
+  setLoading(true);
+
+  try {
+    // 1️⃣ Send email to Temple (Contact Us)
+    await emailjs.send(
+      'service_shanidev',
+      'template_v4cq1x2',
+      {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+      },
+      'EuZ1O9JLuhAWEqhPV'
+    );
+
+    // 2️⃣ Send Auto-Reply to Visitor (Marathi)
+    await emailjs.send(
+      'service_shanidev',
+      'template_g9aayxr',
+      {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+      },
+      'EuZ1O9JLuhAWEqhPV'
+    );
+
     setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({ name: '', email: '', message: '' });
-    }, 3000);
-  };
+    setFormData({ name: '', email: '', message: '' });
+
+    setTimeout(() => setSubmitted(false), 4000);
+
+  } catch (error) {
+    console.error('EmailJS Error:', error);
+    alert('संदेश पाठवता आला नाही. कृपया पुन्हा प्रयत्न करा.');
+  } finally {
+    setLoading(false);
+  }
+};
 
   const handleChange = (e) => {
     setFormData({
@@ -128,8 +163,10 @@ export function Visit() {
               </motion.div>
             </div>
 
-            {/* Map and Guidelines */}
+           {/* Map and Guidelines */}
             <div className="space-y-6">
+
+              {/* Temple Location Map */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -137,15 +174,19 @@ export function Visit() {
                 transition={{ duration: 0.6 }}
                 className="bg-white rounded-lg shadow-md overflow-hidden"
               >
-                <div className="h-64 bg-gradient-to-br from-amber-100 to-orange-100 flex items-center justify-center">
-                  <div className="text-center text-gray-600">
-                    <MapPin className="w-12 h-12 mx-auto mb-2 text-amber-500" />
-                    <p>Google Maps Integration</p>
-                    <p className="mt-2">Tal. Nandurbar, Maharashtra</p>
-                  </div>
+                <div className="relative w-full h-64 md:h-80">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d237936.56264569497!2d74.17902476911631!3d21.2810135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdf05bd55b35a59%3A0xd4d2b0d0a7b0b6e0!2sShri.%20Shani%20Sadesati%20Muktisthan%20Mandir%2C%20Shanimandal!5e0!3m2!1sen!2sin!4v1766300275832!5m2!1sen!2sin"
+                    className="absolute inset-0 w-full h-full border-0"
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Shri Shani Sadesati Muktisthan Mandir Location"
+                  />
                 </div>
               </motion.div>
 
+              {/* Guidelines */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -153,7 +194,10 @@ export function Visit() {
                 transition={{ delay: 0.1, duration: 0.6 }}
                 className="bg-white rounded-lg shadow-md p-6"
               >
-                <h2 className="mb-4 text-gray-900">{t('visit.guidelinesTitle')}</h2>
+                <h2 className="mb-4 text-gray-900">
+                  {t('visit.guidelinesTitle')}
+                </h2>
+
                 <ul className="space-y-3">
                   {guidelines.map((guideline, index) => (
                     <li key={index} className="flex items-start gap-3 text-gray-600">
@@ -163,6 +207,7 @@ export function Visit() {
                   ))}
                 </ul>
               </motion.div>
+
             </div>
           </div>
 
@@ -228,9 +273,10 @@ export function Visit() {
 
               <button
                 type="submit"
-                className="w-full py-3 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition-colors"
+                disabled={loading}
+                className="w-full py-3 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition-colors disabled:opacity-60"
               >
-                {t('visit.submitButton')}
+                {loading ? 'Sending...' : t('visit.submitButton')}
               </button>
             </form>
           </motion.div>

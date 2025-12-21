@@ -44,7 +44,7 @@ export function SEO({ title, description, image }) {
             "addressCountry": "IN"
           },
           "openingHours": "Mo-Su 06:00-12:00,16:00-21:00",
-          "telephone": "+91XXXXXXXXXX",
+          "telephone": "+91 9421618839",
           "image": siteImage
         })}
       </script>
