@@ -16,7 +16,23 @@ export function Home() {
 
   return (
     <div className="min-h-screen">
-      <SEO />
+      <SEO />      
+            {/* SEO Text Content for Google */}
+      <section className="sr-only">
+        <h1>Shani Mandal Temple – Shanimandal</h1>
+
+        <p>
+          Shanimandal is a sacred Shani Mandal temple dedicated to Lord Shani Dev.
+          The Shani Mandal at Shanimandal is visited by devotees seeking relief
+          from Shani Sade Sati, Shani Shanti, peace, prosperity, and spiritual blessings.
+        </p>
+
+        <p>
+          Shani Mandal Temple Shanimandal is well known for traditional pooja,
+          Shani rituals, and religious significance among devotees.
+        </p>
+      </section>
+
       {/* Hero Section */}
       <motion.section
         initial={{ opacity: 0 }}
