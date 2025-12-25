@@ -19,9 +19,11 @@ export function SEO({ title, description, image }) {
       
       {/* Open Graph */}
       <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="Shani Mandal Temple" />
       <meta property="og:title" content={siteTitle} />
       <meta property="og:description" content={siteDescription} />
       <meta property="og:image" content={siteImage} />
+      <meta property="og:url" content="https://sanjay110397.github.io/shanimandal-website/" />
       
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
@@ -33,7 +35,7 @@ export function SEO({ title, description, image }) {
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "Place",
+          "@type": "HinduTemple",
           "name": "Shani Mandal Temple",
           "alternateName": "शनि मंडळ मंदिर",
           "description": siteDescription,
